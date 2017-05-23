@@ -1,0 +1,36 @@
+@media (max-width: 992px) {
+  .app {
+    width: 55%;
+  }
+}
+
+@media (max-width: 720px) {
+  .app {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+  .services-list{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .reviews-add-button{
+      width: 50%;
+    }
+}
+@media (max-width: 425px) {
+    .user-avatar img{
+      width: 150px;
+      height: 150px;
+    }
+    .user-info{
+      display: block;
+    }
+      .show-reviews{
+        display: none;
+      }
+    .reviews-add-button{
+      width: 80%;
+    }
+
+}
