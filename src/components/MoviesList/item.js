@@ -1,18 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const Item = ({video, onVideoSelect}) => {
+
+const Item = ({video, onMovieChoose}) => {
   const snippet = video.snippet;
   const imageUrl = snippet.thumbnails.default.url;
+  const videoId = video.id.videoId;
 
   return (
-    <li className="media" onClick={() => onVideoSelect(video)}>
+    <li className="media" onClick={() => onMovieChoose(video.id.videoId)}>
       <div className="media-left">
-        <a href="#">
+        <Link to={`/movies/${videoId}`}>
           <img className="media-object" src={imageUrl} alt="{title}" />
-        </a>
-      </div>
-      <div className="media-body">
-        <h5 className="media-heading">{snippet.title}</h5>
+          <h5 className="media-heading">{snippet.title}</h5>
+        </Link>
       </div>
     </li>
   )

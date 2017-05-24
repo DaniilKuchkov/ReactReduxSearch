@@ -26,3 +26,9 @@ export const  getMovies = (value) => {
     })
   }
 }
+export const onMovieChoose = (movieId) =>{
+  return {
+    type: 'MOVIE_CHOSE',
+    payload: movieId
+  }
+}

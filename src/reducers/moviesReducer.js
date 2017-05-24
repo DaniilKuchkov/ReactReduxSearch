@@ -1,7 +1,8 @@
 const initialState = {
   fetching: false,
   movies: [],
-  error: null
+  error: null,
+  currentMovieId: null,
 }
 
 function movies(state=initialState,action){
@@ -12,6 +13,8 @@ function movies(state=initialState,action){
             return Object.assign({},state,{fetching: false, movies: action.payload});
         case 'GET_MOVIES_FAILED':
             return Object.assign({},state,{fetching: false, error:`Some Error!`});
+        case 'MOVIE_CHOSE':
+            return Object.assign({},state,{currentMovieId: action.payload});
         default:
             return state;
     }

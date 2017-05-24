@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { hashHistory } from 'react-router';
 
 class Search extends Component {
     render() {
@@ -9,6 +10,7 @@ class Search extends Component {
                 <form onSubmit={(e)=> {
                     e.preventDefault();
                     getMovies(value);
+                    hashHistory.push("/movies")
                 }}>
                     <input type="text" value={value} onChange={(e)=> onSearchChange(e.target.value)}/>
                     <input type="submit" value="Submit"/>
