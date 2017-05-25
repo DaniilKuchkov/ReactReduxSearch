@@ -8,14 +8,14 @@ import MoviesList from './components/MoviesList/moviesList'
 import reducer from './reducers'
 import{ createLogger} from 'redux-logger'
 import thunk from 'redux-thunk';
-import { Router, Route, hashHistory} from 'react-router';
+import { Router, Route, browserHistory} from 'react-router';
 const store = createStore(reducer,applyMiddleware(createLogger(),thunk))
 
 render(
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route  path="/" component={App}>
-                  <Route path="movies" component={MoviesList}/>
+          <Route path="movies" component={MoviesList}/>
         </Route>
         <Route path="/movies/:videoId" component={Details} />
     </Router>

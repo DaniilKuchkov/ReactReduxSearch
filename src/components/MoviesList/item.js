@@ -8,13 +8,11 @@ const Item = ({video, onMovieChoose}) => {
   const videoId = video.id.videoId;
 
   return (
-    <li className="media" onClick={() => onMovieChoose(video.id.videoId)}>
-      <div className="media-left">
+    <li className="item" onClick={() => onMovieChoose(video.id.videoId)}>
         <Link to={`/movies/${videoId}`}>
-          <img className="media-object" src={imageUrl} alt="{title}" />
-          <h5 className="media-heading">{snippet.title}</h5>
+          <img  src={imageUrl} alt="{title}" />
+          <h5>{snippet.title}</h5>
         </Link>
-      </div>
     </li>
   )
 }

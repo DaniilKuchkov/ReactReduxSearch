@@ -7,7 +7,7 @@ class MoviesList extends Component {
   render() {
     const { moviesList, onMovieChoose} = this.props;
     return (
-      <ul className="media-list">
+      <ul className="video-list">
       {moviesList.map((video) => {
         return <Item  
           video={video} 
